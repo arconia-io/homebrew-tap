@@ -1,22 +1,22 @@
-# Generated with JReleaser 1.14.0 at 2024-10-08T20:25:51.452745689Z
+# Generated with JReleaser 1.14.0 at 2024-10-30T18:52:09.382643305Z
 
 class ArconiaCli < Formula
   desc "Enhance the developer experience for Spring Boot"
   homepage "https://github.com/arconia-io/arconia-cli"
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.0.6/arconia-cli-0.0.6-linux-amd64.zip"
-    sha256 "10bede07104b72e5b027d368c731568adc5a9b019f05e1c2e7b2890df6b28afa"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.0.7/arconia-cli-0.0.7-linux-amd64.zip"
+    sha256 "e07799c0ed1ad061f8e8082f8ced80e50be9ca1fe86a38e7c7021018bdd2b053"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.0.6/arconia-cli-0.0.6-macos-aarch64.zip"
-    sha256 "a652d92f0a4c544afbed5362b6d2ccdc169cad1ac724e6467eacadad61af10b5"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.0.7/arconia-cli-0.0.7-macos-aarch64.zip"
+    sha256 "758b3452d571f8fb0e7d7a85e7055be94dd18c5b02bfdb98e90b7336d541283a"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.0.6/arconia-cli-0.0.6-macos-amd64.zip"
-    sha256 "dceab82ba2e55769af2d5ba10fc77ca7938a4ed1dc6ad397cd9cbdd5b2a49eec"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.0.7/arconia-cli-0.0.7-macos-amd64.zip"
+    sha256 "ddabdbf3c70141190e02dd1dfb4a1748abfed33b4c5461876c8c05919324cc83"
   end
 
 
@@ -27,6 +27,6 @@ class ArconiaCli < Formula
 
   test do
     output = shell_output("#{bin}/arconia --version")
-    assert_match "0.0.6", output
+    assert_match "0.0.7", output
   end
 end
