@@ -1,22 +1,26 @@
-# Generated with JReleaser 1.18.0 at 2025-06-25T15:18:41.142245673Z
+# Generated with JReleaser 1.19.0 at 2025-07-08T15:07:47.823912499Z
 
 class ArconiaCli < Formula
   desc "Enhance the developer experience for Spring Boot"
   homepage "https://github.com/arconia-io/arconia-cli"
-  version "0.2.9"
+  version "0.3.0"
   license "Apache-2.0"
 
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.3.0/arconia-cli-0.3.0-linux-aarch64.zip"
+    sha256 "40c1d1d82b1db9cb4642e63e0b09c55285705cbc255789e355cd877f9156edeb"
+  end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.2.9/arconia-cli-0.2.9-linux-amd64.zip"
-    sha256 "2406cd88b8b375ba08d9b7253464be13840013ef84e410f5e403da8a9533ec8e"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.3.0/arconia-cli-0.3.0-linux-amd64.zip"
+    sha256 "76f2958632c5f6cb882cea242b8c8443e275cd306d52abe9f768fbb7596f9b13"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.2.9/arconia-cli-0.2.9-macos-aarch64.zip"
-    sha256 "078fcb1eb2dfd1a0df6e9772b6cc4d781ea13edb0371e8f8044cc81039ac41a8"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.3.0/arconia-cli-0.3.0-macos-aarch64.zip"
+    sha256 "cebf2a929d4099ad15ab88c70dac6a7eab09d293c125cf0b46fb8dd75bc13178"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.2.9/arconia-cli-0.2.9-macos-amd64.zip"
-    sha256 "b5b223a969f205de60ff397c1fd644c0acef83f4211b6e748a83dd88838a5397"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.3.0/arconia-cli-0.3.0-macos-amd64.zip"
+    sha256 "898957c5bbce07d15ea207ceaa32be890ad860c77d165b550d6397c5454eb298"
   end
 
 
@@ -27,6 +31,6 @@ class ArconiaCli < Formula
 
   test do
     output = shell_output("#{bin}/arconia --version")
-    assert_match "0.2.9", output
+    assert_match "0.3.0", output
   end
 end
