@@ -1,26 +1,26 @@
-# Generated with JReleaser 1.20.0 at 2025-10-12T21:29:49.666115882Z
+# Generated with JReleaser 1.21.0 at 2025-11-04T20:59:22.618172699Z
 
 class ArconiaCli < Formula
   desc "Enhance the developer experience for Spring Boot"
   homepage "https://github.com/arconia-io/arconia-cli"
-  version "0.7.2"
+  version "0.8.0"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.7.2/arconia-cli-0.7.2-linux-aarch64.zip"
-    sha256 "ebae0ef57282e500c34aca0c99b0d47940e13e283b9ce46d370054f29706ea1e"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.8.0/arconia-cli-0.8.0-linux-aarch64.zip"
+    sha256 "89671880e95b5017a4bed0c65238ace19cbd74398ded96fce347ca561c2b7041"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.7.2/arconia-cli-0.7.2-linux-amd64.zip"
-    sha256 "a3b7c2f61ffeadc46edf2f1273aae9406b56fc5d6c017e55d7a8b25905a06dbe"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.8.0/arconia-cli-0.8.0-linux-amd64.zip"
+    sha256 "ec45a41078dde6aa2191d134cf23cf81e1abbc047facd091e4de8b324e72f9d9"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.7.2/arconia-cli-0.7.2-macos-aarch64.zip"
-    sha256 "99f1cefb15f947796ea1ffb0b58792f77bec14acb48ee0b6c8c9bf21e71c85ba"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.8.0/arconia-cli-0.8.0-macos-aarch64.zip"
+    sha256 "18d1d21151e5252644c21170e7558796674f23375b9e4accb42b9cc97f14f747"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.7.2/arconia-cli-0.7.2-macos-amd64.zip"
-    sha256 "7a915c2d46106e31c20bd6ae928107aa38f72ddfdace7e166934af48e71e74d5"
+    url "https://github.com/arconia-io/arconia-cli/releases/download/v0.8.0/arconia-cli-0.8.0-macos-amd64.zip"
+    sha256 "66cb6cc4568667024d5ec4f845abdf081c2d032dd50022e1643b85452e02591e"
   end
 
 
@@ -31,6 +31,6 @@ class ArconiaCli < Formula
 
   test do
     output = shell_output("#{bin}/arconia --version")
-    assert_match "0.7.2", output
+    assert_match "0.8.0", output
   end
 end
